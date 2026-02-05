@@ -1,4 +1,3 @@
-import React from 'react';
 import Navigation from './components/layout/Navbar';
 import Hero from './components/sections/Hero';
 import DisciplinesSection from './components/sections/DisciplinesSection';
