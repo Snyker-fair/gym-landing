@@ -1,0 +1,72 @@
+@import 'variables';
+@import 'bootstrap/scss/bootstrap';
+
+// Reset Global
+body {
+  background-color: $dark-bg;
+  color: $text-main;
+  font-family: $font-stack;
+  overflow-x: hidden;
+}
+
+// Contrastes para parrafos
+p, li, span {
+  color: #e9ecef;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+// Sobreescribir estilos molestos de Bootstrap
+.btn:focus, .btn:active {
+  box-shadow: none !important;
+}
+
+.text-muted {
+  color: #adb5bd !important;
+}
+
+.text-secondary {
+  color: #ced4da !important;
+}
+
+// Clase de utilidad para textos con el color neón
+.text-neon {
+  color: $primary !important;
+}
+
+// Efecto hover para la Navbar
+.hover-underline {
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $primary; // Tu Cian Neón
+    transition: width 0.3s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+  
+  &:hover {
+    color: $primary !important; // El texto también se pone azul
+  }
+}
+
+// DESPLAZAMIENTO SUAVE
+html {
+  scroll-behavior: smooth;
+  // Esto es vital: compensa la altura de la Navbar fija (aprox 80px)
+  
+}
+
+// Efecto Hover para enlaces del footer
+.hover-neon {
+  transition: color 0.3s ease;
+  &:hover {
+    color: $primary !important; // Se pone Cian al pasar el mouse
+  }
+}
