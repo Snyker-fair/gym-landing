@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { Car, Wifi, ShowerHead, Users, Lock, Zap } from 'lucide-react';

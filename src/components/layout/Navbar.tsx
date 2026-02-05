@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react'; // Quitamos 'Dumbbell' porque usaremos imagen

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { motion } from 'framer-motion';
 import { disciplines } from '../../data/gymData'; // Importamos tus datos
