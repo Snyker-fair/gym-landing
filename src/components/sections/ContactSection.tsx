@@ -39,7 +39,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-5 position-relative" style={{ backgroundColor: '#111111' }}>
+    <section id="contacto" className="py-5 position-relative" style={{ backgroundColor: '#111111' }}>
       <Container className="py-5">
         <Row className="justify-content-center">
           <Col lg={8} xl={7}>
