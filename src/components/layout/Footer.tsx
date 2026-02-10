@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contacto" className="pt-5 pb-3 text-white" style={{ backgroundColor: '#111111' }}>
+    <footer className="pt-5 pb-3 text-white" style={{ backgroundColor: '#111111' }}>
       <Container>
         <Row className="g-5 mb-5">
           

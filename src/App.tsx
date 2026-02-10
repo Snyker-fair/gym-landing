@@ -4,6 +4,7 @@ import DisciplinesSection from './components/sections/DisciplinesSection';
 import PricingSection from './components/sections/PricingSection';
 import FacilitiesSection from './components/sections/FacilitiesSection';
 import Footer from './components/layout/Footer';
+import ContactSection from './components/sections/ContactSection';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <DisciplinesSection />
         <PricingSection />
         <FacilitiesSection />
+        <ContactSection />
       </main>
 
       {/* FOOTER AL FINAL DE TODO */}
