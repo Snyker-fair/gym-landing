@@ -63,7 +63,7 @@ const Navigation = () => {
                 { label: 'Disciplinas', target: '#disciplinas' },
                 { label: 'Planes', target: '#planes' },
                 { label: 'Instalaciones', target: '#instalaciones' },
-                { label: 'Contacto', target: '#contacto' } // Este lo crearemos en el Footer
+                { label: 'Contacto', target: '#contact' } // Este lo crearemos en el Footer
             ].map((item) => (
                 <Nav.Link 
                 key={item.label} 
