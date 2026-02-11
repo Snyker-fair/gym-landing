@@ -5,7 +5,7 @@ import PlanCard from '../ui/PlanCard';
 
 const PricingSection = () => {
   return (
-    <section id="planes" className="py-5 position-relative">
+    <section id="planes" className="py-5 position-relative section-shell">
       
       {/* Fondo degradado CIAN sutil detrás */}
       <div 

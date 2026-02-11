@@ -12,7 +12,7 @@ const ContactSection = () => {
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
   // Función para codificar los datos como lo espera Netlify
-  const encode = (data: any) => {
+  const encode = (data: Record<string, string>) => {
     return Object.keys(data)
       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
       .join("&");
@@ -39,7 +39,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contacto" className="py-5 position-relative" style={{ backgroundColor: '#111111' }}>
+    <section id="contacto" className="py-5 position-relative section-shell" style={{ backgroundColor: '#111111' }}>
       <Container className="py-5">
         <Row className="justify-content-center">
           <Col lg={8} xl={7}>
@@ -62,7 +62,7 @@ const ContactSection = () => {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="p-4 p-md-5 rounded-4 border border-secondary"
+              className="modern-card p-4 p-md-5 rounded-4 border border-secondary"
               style={{ backgroundColor: '#1a1b1e' }}
             >
               {status === 'success' ? (

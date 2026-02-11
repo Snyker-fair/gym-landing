@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import { motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react'; // Quitamos 'Dumbbell' porque usaremos imagen
-
-// 1. IMPORTA TU LOGO AQUÍ
-// (Asegúrate que el nombre del archivo coincida: logo.png, logo.svg, etc.)
-import logoImg from '../../assets/img/meta-logo.png'; 
+import { Menu, X } from 'lucide-react';
+import logoImg from '../../assets/img/meta-logo.png';
 
 const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -13,44 +10,47 @@ const Navigation = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      setScrolled(window.scrollY > 40);
     };
+
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const navLinks = [
+    { label: 'Disciplinas', target: '#disciplinas' },
+    { label: 'Planes', target: '#planes' },
+    { label: 'Instalaciones', target: '#instalaciones' },
+    { label: 'Contacto', target: '#contacto' }
+  ];
+
   return (
-    <Navbar 
-      expand="lg" 
-      fixed="top" 
+    <Navbar
+      expand="lg"
+      fixed="top"
       variant="dark"
       expanded={expanded}
-      className={`py-3 transition-all ${scrolled ? 'shadow-lg' : ''}`}
+      className={`nav-modern py-3 ${scrolled ? 'shadow-lg' : ''}`}
       style={{
-        backgroundColor: (scrolled || expanded) ? '#1a1b1e' : 'transparent',
-        backdropFilter: (scrolled || expanded) ? 'blur(10px)' : 'none',
-        transition: 'all 0.3s ease-in-out'
+        backgroundColor: scrolled || expanded ? 'rgba(14, 16, 24, 0.86)' : 'transparent',
+        backdropFilter: scrolled || expanded ? 'blur(16px)' : 'none',
+        borderBottom: scrolled || expanded ? '1px solid rgba(255,255,255,0.1)' : '1px solid transparent'
       }}
     >
       <Container>
-        {/* --- CAMBIO AQUÍ: LOGO DE IMAGEN --- */}
         <Navbar.Brand href="#" className="d-flex align-items-center gap-2">
-          <motion.div
-            whileHover={{ scale: 1.1 }} // Efecto zoom suave al pasar el mouse
-            transition={{ duration: 0.3 }}
-          >
-            <img 
-              src={logoImg} 
-              alt="Meta Gym Logo" 
-              // Ajusta la altura (height) según necesites (40px a 50px es estándar)
-              style={{ height: '45px', width: 'auto', objectFit: 'contain' }} 
+          <motion.div whileHover={{ scale: 1.06 }} transition={{ duration: 0.25 }}>
+            <img
+              src={logoImg}
+              alt="Meta Gym Logo"
+              style={{ height: '45px', width: 'auto', objectFit: 'contain' }}
             />
           </motion.div>
-            
+          <span className="small text-uppercase d-none d-sm-block">Meta Gym</span>
         </Navbar.Brand>
 
-        <Navbar.Toggle 
-          aria-controls="basic-navbar-nav" 
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
           onClick={() => setExpanded(!expanded)}
           className="border-0 focus-ring-none"
         >
@@ -58,40 +58,22 @@ const Navigation = () => {
         </Navbar.Toggle>
 
         <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto align-items-center gap-lg-4 text-uppercase fw-bold small">
-            {[
-                { label: 'Disciplinas', target: '#disciplinas' },
-                { label: 'Planes', target: '#planes' },
-                { label: 'Instalaciones', target: '#instalaciones' },
-                { label: 'Contacto', target: '#contact' } // Este lo crearemos en el Footer
-            ].map((item) => (
-                <Nav.Link 
-                key={item.label} 
-                href={item.target} // Usamos el ID correcto (en inglés)
+          <Nav className="ms-auto align-items-center gap-lg-4 text-uppercase fw-bold small">
+            {navLinks.map((item) => (
+              <Nav.Link
+                key={item.label}
+                href={item.target}
                 className="text-white position-relative hover-underline"
                 onClick={() => setExpanded(false)}
                 style={{ letterSpacing: '1px' }}
-                >
+              >
                 {item.label}
-                </Nav.Link>
+              </Nav.Link>
             ))}
-            
-            <Button 
-              variant="outline-light" 
-              className="px-4 py-2 rounded-pill fw-bold ms-lg-3 mt-3 mt-lg-0"
-              style={{ 
-                borderColor: '#29D8FF', 
-                color: '#29D8FF',
-                boxShadow: '0 0 10px rgba(41, 216, 255, 0.2)'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#29D8FF';
-                e.currentTarget.style.color = '#000';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'transparent';
-                e.currentTarget.style.color = '#29D8FF';
-              }}
+
+            <Button
+              variant="outline-light"
+              className="modern-card-button px-4 py-2 rounded-pill fw-bold ms-lg-3 mt-3 mt-lg-0"
             >
               Clase de Prueba
             </Button>

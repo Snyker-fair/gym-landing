@@ -5,7 +5,7 @@ import DisciplineCard from '../ui/DisciplineCard';
 
 const DisciplinesSection = () => {
   return (
-    <section id="disciplinas" className="py-5 position-relative">
+    <section id="disciplinas" className="py-5 position-relative section-shell">
       <Container className="py-5">
         {/* ENCABEZADO DE SECCIÓN */}
         <div className="text-center mb-5">

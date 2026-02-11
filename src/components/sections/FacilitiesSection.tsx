@@ -40,7 +40,7 @@ const FacilitiesSection = () => {
   ];
 
   return (
-    <section id="instalaciones" className="py-5 bg-dark position-relative">
+    <section id="instalaciones" className="py-5 bg-dark position-relative section-shell">
       <Container className="py-5">
         
         <div className="text-center mb-5">
@@ -69,7 +69,7 @@ const FacilitiesSection = () => {
                 transition={{ delay: index * 0.1 }}
                 whileHover={{ y: -5 }}
               >
-                <Card className="h-100 border-0 shadow-sm" style={{ backgroundColor: '#27272a' }}>
+                <Card className="modern-card h-100 border-0 shadow-sm" style={{ backgroundColor: '#27272a' }}>
                   <Card.Body className="p-4 d-flex align-items-start gap-3">
                     {/* Icono con círculo de fondo neón suave */}
                     <div 
