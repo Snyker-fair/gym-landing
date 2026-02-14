@@ -1,4 +1,5 @@
 # Gym Landing - Meta Gym 2.0
+[![Netlify Status](https://api.netlify.com/api/v1/badges/110d4384-ee3a-4697-8f24-6607d882c0e3/deploy-status)](https://app.netlify.com/projects/mellifluous-blancmange-8e14a3/deploys)
 
 Este proyecto es una landing page moderna para un gimnasio, construida con React, TypeScript y Vite, utilizando un diseño oscuro con acentos de neón (Cian Neón).
 

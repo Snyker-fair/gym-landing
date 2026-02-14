@@ -1,4 +1,5 @@
 # Meta Gym Landing Page
+[![Netlify Status](https://api.netlify.com/api/v1/badges/110d4384-ee3a-4697-8f24-6607d882c0e3/deploy-status)](https://app.netlify.com/projects/mellifluous-blancmange-8e14a3/deploys)
 
 Welcome to the Meta Gym Landing Page project! This is a modern, responsive single-page application designed to showcase a gym's facilities, disciplines, pricing, and contact information. Built with React and Vite, it leverages contemporary web technologies to deliver a fast and engaging user experience.
 
