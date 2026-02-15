@@ -1,28 +1,23 @@
-import Navigation from './components/layout/Navbar';
-import Hero from './components/sections/Hero';
-import DisciplinesSection from './components/sections/DisciplinesSection';
-import PricingSection from './components/sections/PricingSection';
-import FacilitiesSection from './components/sections/FacilitiesSection';
-import Footer from './components/layout/Footer';
-import ContactSection from './components/sections/ContactSection';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import LandingPage from './pages/LandingPage';
+import LoginPage from './pages/LoginPage'; // Asumiendo que ya creaste este archivo
 
-function App() {
+const App: React.FC = () => {
   return (
-    <>
-      <Navigation />
+    <Routes>
+      {/* Rutas Públicas */}
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<LoginPage />} />
       
-      <main>
-        <Hero />
-        <DisciplinesSection />
-        <PricingSection />
-        <FacilitiesSection />
-        <ContactSection />
-      </main>
-
-      {/* FOOTER AL FINAL DE TODO */}
-      <Footer />
-    </>
+      {/* Ruta por defecto (Error 404) */}
+      <Route path="*" element={
+        <div className="vh-100 d-flex align-items-center justify-content-center bg-dark text-white">
+          <h1 className="fw-bold">404 - Página no encontrada</h1>
+        </div>
+      } />
+    </Routes>
   );
-}
+};
 
 export default App;

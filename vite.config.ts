@@ -6,8 +6,9 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
-        // Silenciar advertencias de dependencias antiguas
-        silenceDeprecations: ['legacy-js-api', 'import', 'global-builtin', 'color-functions', 'mixed-decls'],
+        // Silenciamos las advertencias de deprecación para evitar ruido en la consola
+        // 'mixed-decls' se elimina si es obsoleta en tu versión de SASS
+        silenceDeprecations: ['legacy-js-api', 'import', 'global-builtin', 'color-functions'],
         quietDeps: true,
       },
     },
