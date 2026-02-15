@@ -1,0 +1,11 @@
+# Redirigir todas las peticiones /api a nuestra función de Hono
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
+
+# Redirigir todo lo demás a React (Esto reemplaza al archivo _redirects que hicimos antes)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
